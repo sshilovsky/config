@@ -29,6 +29,12 @@ setopt hist_ignore_all_dups hist_ignore_space
 
 setopt extendedglob
 
+# emulate vim option: backspace=...
+bindkey "^W" backward-kill-word
+bindkey "^H" backward-delete-char
+bindkey "^U" backward-kill-line
+bindkey "^?" backward-delete-char
+
 # # Lines configured by zsh-newuser-install
 # HISTFILE=~/.histfile
 # HISTSIZE=1000
