@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ $1x = x ]
+then
+	session="tmux-login"
+else
+	session=$1
+fi
+
+sh -l -c "tmux has -t $session && tmux attach -t $session || tmux new-session -n $session"
+
