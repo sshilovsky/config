@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]
+then
+	echo "Usage: $0 <executable> [<parameters>]" >&2
+	exit 2 
+fi
+
+session=tmuxed-$(basename $1)
+
+tmux has-session -t $session 2>/dev/null &&
+	tmux attach -t $session ||
+	tmux new-session -s $session "${*:1:$#}"
+
