@@ -6,6 +6,9 @@ if has('win32') || has('win64')
   set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 endif
 
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
 colorscheme koehler
 
 syntax enable
@@ -39,6 +42,9 @@ set ruler
 set showcmd
 
 set backupdir=./.backup,/tmp,.
+if has('win32') || has('win64')
+	set backupdir=./.backup,c:/temp,.
+endif
 set backupext=.bak
 set backup
 
