@@ -18,6 +18,7 @@ filetype indent plugin on
 augroup sshilovsky
 autocmd!
 autocmd bufwritepost ~/.vimrc source %
+autocmd vimenter * NERDTree | wincmd p
 augroup END
 
 set mouse=a
