@@ -38,7 +38,7 @@ let mapleader=','
 noremap <Leader>w :update<CR>
 noremap <Leader>W :wall<CR>
 noremap <Leader>q :quit<CR>
-noremap <Leader>Q :confirm quit<CR>
+noremap <Leader>Q :confirm qall<CR>
 noremap <Leader>wq :wq<CR>
 
 noremap ; q:
