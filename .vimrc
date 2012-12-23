@@ -43,7 +43,7 @@ noremap <Leader>Q :confirm qall<CR>
 noremap <Leader>wq :wq<CR>
 
 noremap ; q:
-noremap <Space> i
+nnoremap <Space> i
 
 set ruler
 set showcmd
