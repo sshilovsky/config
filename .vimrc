@@ -12,6 +12,7 @@ call pathogen#infect()
 colorscheme koehler
 
 syntax enable
+filetype indent plugin on
 
 augroup sshilovsky
 autocmd!
