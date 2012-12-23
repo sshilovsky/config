@@ -11,6 +11,7 @@ call pathogen#infect()
 
 colorscheme koehler
 
+set number
 syntax enable
 filetype indent plugin on
 
@@ -30,11 +31,9 @@ set autoindent
 
 let mapleader=','
 noremap <Leader>w :update<CR>
-noremap <Leader>W :update<CR>
-noremap <Leader>s :update<CR>
-noremap <Leader>S :update<CR>
+noremap <Leader>W :wall<CR>
 noremap <Leader>q :quit<CR>
-noremap <Leader>Q :quit<CR>
+noremap <Leader>Q :qall<CR>
 
 noremap ; q:
 noremap <Space> i
