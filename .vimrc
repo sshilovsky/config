@@ -34,6 +34,7 @@ noremap <Leader>w :update<CR>
 noremap <Leader>W :wall<CR>
 noremap <Leader>q :quit<CR>
 noremap <Leader>Q :confirm quit<CR>
+noremap <Leader>wq :wq<CR>
 
 noremap ; q:
 noremap <Space> i
