@@ -17,8 +17,11 @@ filetype indent plugin on
 
 augroup sshilovsky
 autocmd!
+" Autosource ~/.vimrc on modifying
 autocmd bufwritepost ~/.vimrc source %
+" Autorun NERDTree on starting vim
 autocmd vimenter * NERDTree | wincmd p
+" Autoquit vim when only NERDTree left: https://github.com/scrooloose/nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 augroup END
 
