@@ -1,0 +1,38 @@
+"mpc toggle"
+    XF86AudioPlay
+"mpc toggle"
+    Mod4 + Pause
+
+"mpc prev"
+    XF86AudioPrev
+"mpc prev"
+    Mod4 + Prior
+
+"mpc next"
+    XF86AudioNext
+"mpc next"
+    Mod4 + Next
+
+"mpc volume -5"
+    XF86AudioLowerVolume
+"mpc volume -5"
+    Mod4 + 9
+
+"mpc volume +5"
+    XF86AudioRaiseVolume
+"mpc volume +5"
+    Mod4 + 0
+
+
+
+"scrot"
+    Print
+
+"urxvtc.sh"
+    Mod4 + F1
+"uzbl-browser"
+    Mod4 + F3
+"urxvtc.sh -e vifm"
+    Mod4 + F5
+
+
