@@ -42,6 +42,7 @@ noremap <Leader>W :wall<CR>
 noremap <Leader>q :quit<CR>
 noremap <Leader>Q :confirm qall<CR>
 noremap <Leader>wq :wq<CR>
+noremap <Leader>ss iSergei Shilovsky <sshilovsky@gmail.com><ESC>
 
 noremap ; q:
 nnoremap <Space> i
