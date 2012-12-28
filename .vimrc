@@ -10,10 +10,11 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
+syntax enable
 colorscheme koehler
+highlight Folded guibg=darkblue guifg=white
 
 set number
-syntax enable
 filetype indent plugin on
 
 augroup sshilovsky
