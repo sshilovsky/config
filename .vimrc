@@ -16,6 +16,7 @@ highlight Folded guibg=darkblue guifg=white
 
 set number
 filetype indent plugin on
+set foldlevel=1
 
 augroup sshilovsky
 autocmd!
