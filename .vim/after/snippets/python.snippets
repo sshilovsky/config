@@ -1,0 +1,6 @@
+snippet class
+	class ${1:ClassName}(${2:object}):
+		"""${3:docstring for $1}"""
+		def __init__(self, ${4:*args, **kwargs}):
+			${5:super($1, self).__init__(*args, **kwargs)}
+			${6}
