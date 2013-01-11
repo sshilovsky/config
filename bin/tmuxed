@@ -8,6 +8,7 @@ fi
 
 session=tmuxed-$(basename $1)
 
+export TMUX=
 tmux has-session -t $session 2>/dev/null &&
 	tmux attach -t $session ||
 	tmux new-session -s $session "${*:1:$#}"
