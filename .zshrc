@@ -8,6 +8,7 @@ prompt bigfade
 
 alias irssi='tmuxed irssi'
 alias rtorrent='tmuxed rtorrent'
+alias cave='sudo cave -c yes'
 
 alias ls='ls --color=auto'
 alias dir='dir --color=auto'
