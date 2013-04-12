@@ -1,3 +1,3 @@
-PATH="~/bin:${PATH}"
+PATH="~/bin:/sbin:/usr/sbin:${PATH}"
 EDITOR="vim"
 
