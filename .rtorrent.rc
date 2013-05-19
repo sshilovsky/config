@@ -1,0 +1,26 @@
+# See RTorrent article in ArchWiki
+
+# scgi_port = localhost:5000
+
+directory = /home/[store]/Downloads
+encryption = allow_incoming,try_outgoing,enable_retry
+upload_rate = 5K
+#download_rate = 150K
+
+dht = auto
+dht_port = 6881
+peer_exchange = yes
+
+
+# Saving torrent state and resume data between sessions
+session = ~/.cache/rtorrent/session
+
+# Move .torrent file after loading it manually
+# Do NOT use this if in combination with a watch folder!
+system.method.set_key = event.download.inserted_new,move_tor,"execute=mv,-n,$d.get_loaded_file=,~/Trash/"
+
+# Start or stop all torrents
+# ^x d.multicall=,d.stop=
+# ^X d.multicall=,d.start=
+
+
