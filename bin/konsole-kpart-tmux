@@ -11,12 +11,8 @@ case $CLASS in
     yakuake)
         exec $TMUX_SESSION yakuake
         ;;
-    konsole)
-        exec tmux
-        ;;
-    dolphin)
-        exec $TMUX_SESSION dolphin
-        ;;
+    #konsole)
+    #dolphin)
     *)
         exec `chsh`
         ;;
