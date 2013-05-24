@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# TODO -l key for login session
+# TODO -d key for detach
+
+if [ $1x = x ]
+then
+	echo "Usage: $0 <sessionname> [shell]" > /dev/stderr
+    exit 2
+fi
+
+session="$1"
+command="${@:2:$#}"
+
+tmux has -t "$session" 2> /dev/null && tmux attach -t "$session" || tmux new-session -s "$session" $command
+
