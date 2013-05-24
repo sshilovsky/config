@@ -14,7 +14,7 @@ case $CLASS in
     #konsole)
     #dolphin)
     *)
-        exec `chsh`
+        exec $SHELL
         ;;
 esac
 
