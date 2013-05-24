@@ -6,8 +6,8 @@ autoload -U promptinit
 promptinit
 prompt bigfade
 
-alias irssi='tmuxed irssi'
-alias rtorrent='tmuxed rtorrent'
+alias irssi='tmux-session irssi irssi'
+alias rtorrent='tmux-session rtorrent rtorrent'
 alias cave='sudo cave -c yes'
 
 alias ls='ls --color=auto'
