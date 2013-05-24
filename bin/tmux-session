@@ -1,11 +1,13 @@
 #!/bin/bash
 
-# TODO -l key for login session
 # TODO -d key for detach
+# TODO -n key for nested
 
 if [ $1x = x ]
 then
-	echo "Usage: $0 <sessionname> [shell]" > /dev/stderr
+	echo "Usage: $0 [-d] [-n] <sessionname> [shell]" > /dev/stderr
+    echo "        -d: [not implemented] do not attach a client to the session" > /dev/stderr
+    echo "        -n: [not implemented] allow for nested tmux instance" > /dev/stderr
     exit 2
 fi
 
