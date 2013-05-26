@@ -11,8 +11,9 @@ case $CLASS in
     yakuake)
         exec $TMUX_SESSION yakuake
         ;;
-    #konsole)
-    #dolphin)
+    konsole | dolphin | kate)
+        exec tmux new-session 'tmux set-option destroy-unattached on ; exec $SHELL'
+        ;;
     *)
         exec $SHELL
         ;;
