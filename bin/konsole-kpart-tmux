@@ -3,6 +3,7 @@
 # Do different tmux actions depending on X11 window class
 # Suppose that WINDOWID env. var. is set
 
+TMUX= # allow tmux nesting here
 CLASS=`xprop -id $WINDOWID | grep WM_CLASS | cut '-d"' -f 2`
 
 TMUX_SESSION="$(dirname $0)/tmux-session"
