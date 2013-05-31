@@ -6,13 +6,24 @@ MOUNTPOINT=~/ENCFS
 ENCRYPTED=~/.ENCFS
 OPTIONS='-i 5 -- -o nonempty'
 
-echo "Trying to unmount"
-fusermount -u $MOUNTPOINT && echo Ok ||
-    {
-        echo "Failed: trying to mount"
-        $ENCFS $ENCRYPTED $MOUNTPOINT $OPTIONS && echo Ok ||
-            {
-                echo "Failed too"
-            }
-    }
+if [ -d $MOUNTPOINT ] # suppose that its mounted
+then
+    echo -n "unmount: "
+    if fusermount -u $MOUNTPOINT
+    then
+        echo "Ok"
+        rmdir $MOUNTPOINT
+        exit
+    fi
+    echo "Failed to unmount"
+else
+    mkdir $MOUNTPOINT ||
+        {
+            echo "Failed to create mount point"
+            exit 1
+        }
+fi
+    
+echo -n "mount: "
+$ENCFS $ENCRYPTED $MOUNTPOINT $OPTIONS && echo Ok
 
