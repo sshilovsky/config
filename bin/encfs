@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# mount/unmount ENCFS
+ENCFS=/usr/bin/encfs
+MOUNTPOINT=~/ENCFS
+ENCRYPTED=~/.ENCFS
+OPTIONS='-i 5 -- -o nonempty'
+
+echo "Trying to unmount"
+fusermount -u $MOUNTPOINT && echo Ok ||
+    {
+        echo "Failed: trying to mount"
+        $ENCFS $ENCRYPTED $MOUNTPOINT $OPTIONS && echo Ok ||
+            {
+                echo "Failed too"
+            }
+    }
+
