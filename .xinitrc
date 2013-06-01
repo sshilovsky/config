@@ -1,8 +1,7 @@
 #!/bin/sh
 
 nohup xbindkeys >>~/log/xbindkeys.log &
-#nohup yakuake &
-#nohup skype &
+nohup skype >>~/log/skype.log &
 
-exec startkde >>~/log/startkde.log
+exec nohup startkde >>~/log/startkde.log
 
