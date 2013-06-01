@@ -28,6 +28,9 @@
 "scrot"
     Print
 
+"yakuake"
+    F12
+
 "urxvtc.sh"
     Mod4 + F1
 "uzbl-browser"
