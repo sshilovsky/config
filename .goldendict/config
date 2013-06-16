@@ -49,6 +49,11 @@
   <website enabled="0" url="http://www.abbyyonline.ru/translate.aspx?LingvoAction=translate&amp;Ln=1&amp;words=%GDWORD%" id="924db471b105299c82892067c0f10787" name="Lingvo (En-Ru)"/>
   <website enabled="0" url="http://michaelis.uol.com.br/moderno/ingles/index.php?lingua=portugues-ingles&amp;palavra=%GDISO1%" id="087a6d65615fb047f4c80eef0a9465db" name="Michaelis (Pt-En)"/>
  </websites>
+ <programs>
+  <program enabled="0" commandLine="festival --tts" type="0" id="428b4c2b905ef568a43d9a16f59559b0" name="Festival"/>
+  <program enabled="0" commandLine="espeak %GDWORD%" type="0" id="2cf8b3a60f27e1ac812de0b57c148340" name="Espeak"/>
+  <program enabled="0" commandLine="man -a --html=/bin/cat %GDWORD%" type="2" id="4f898f7582596cea518c6b0bfdceb8b3" name="Manpages"/>
+ </programs>
  <mutedDictionaries>
   <mutedDictionary>ae6f89aac7151829681b85f035d54e48</mutedDictionary>
   <mutedDictionary>f376365a0de651fd7505e7e5e683aa45</mutedDictionary>
@@ -64,16 +69,19 @@
   <displayStyle></displayStyle>
   <newTabsOpenAfterCurrentOne>0</newTabsOpenAfterCurrentOne>
   <newTabsOpenInBackground>1</newTabsOpenInBackground>
+  <hideSingleTab>0</hideSingleTab>
+  <hideMenubar>0</hideMenubar>
   <enableTrayIcon>1</enableTrayIcon>
   <startToTray>1</startToTray>
   <closeToTray>1</closeToTray>
   <autoStart>0</autoStart>
   <doubleClickTranslates>1</doubleClickTranslates>
+  <escKeyHidesMainWindow>0</escKeyHidesMainWindow>
   <zoomFactor>1</zoomFactor>
   <wordsZoomLevel>0</wordsZoomLevel>
-  <enableMainWindowHotkey>1</enableMainWindowHotkey>
+  <enableMainWindowHotkey>0</enableMainWindowHotkey>
   <mainWindowHotkey>Ctrl+F11, Ctrl+F11</mainWindowHotkey>
-  <enableClipboardHotkey>1</enableClipboardHotkey>
+  <enableClipboardHotkey>0</enableClipboardHotkey>
   <clipboardHotkey>Ctrl+C, Ctrl+C</clipboardHotkey>
   <enableScanPopup>1</enableScanPopup>
   <startWithScanPopupOn>1</startWithScanPopupOn>
@@ -81,6 +89,9 @@
   <scanPopupModifiers>1</scanPopupModifiers>
   <scanPopupAltMode>1</scanPopupAltMode>
   <scanPopupAltModeSecs>3</scanPopupAltModeSecs>
+  <scanPopupUseUIAutomation>0</scanPopupUseUIAutomation>
+  <scanPopupUseIAccessibleEx>0</scanPopupUseIAccessibleEx>
+  <scanPopupUseGDMessage>0</scanPopupUseGDMessage>
   <pronounceOnLoadMain>0</pronounceOnLoadMain>
   <pronounceOnLoadPopup>0</pronounceOnLoadPopup>
   <useExternalPlayer>1</useExternalPlayer>
@@ -95,14 +106,18 @@
   </proxyserver>
   <checkForNewReleases>0</checkForNewReleases>
   <disallowContentFromOtherSites>0</disallowContentFromOtherSites>
+  <enableWebPlugins>0</enableWebPlugins>
  </preferences>
  <lastMainGroupId>0</lastMainGroupId>
  <lastPopupGroupId>0</lastPopupGroupId>
- <popupWindowState>AAAA/wAAAAH9AAAAAAAAAhAAAAGTAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAQAAAAEAAAAaAGQAaQBjAHQAaQBvAG4AYQByAHkAQgBhAHIDAAAAAP////8AAAAAAAAAAA==</popupWindowState>
+ <popupWindowState>AAAA/wAAAAH9AAAAAAAAAAAAAAAAAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAQAAAAEAAAAaAGQAaQBjAHQAaQBvAG4AYQByAHkAQgBhAHIDAAAAAP////8AAAAAAAAAAA==</popupWindowState>
  <popupWindowGeometry>AdnQywABAAAAAAIRAAABdgAABD0AAAMIAAACEQAAAXYAAAQ9AAADCAAAAAAAAA==</popupWindowGeometry>
- <mainWindowState>AAAA/wAAAAH9AAAAAQAAAAAAAADSAAABwPwCAAAAAfsAAAAUAHMAZQBhAHIAYwBoAFAAYQBuAGUBAAAAMgAAAcAAAACFAQAABQAAAbgAAAHAAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAUAG4AYQB2AFQAbwBvAGwAYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABoAZABpAGMAdABpAG8AbgBhAHIAeQBCAGEAcgEAAAE4/////wAAAAAAAAAA</mainWindowState>
- <mainWindowGeometry>AdnQywABAAAAAAJvAAABxgAABP8AAAPlAAACcQAAAd0AAAT9AAAD4QAAAAAAAA==</mainWindowGeometry>
+ <pinPopupWindow>0</pinPopupWindow>
+ <mainWindowState>AAAA/wAAAAH9AAAAAgAAAAAAAADSAAAB0/wCAAAAAfsAAAAUAHMAZQBhAHIAYwBoAFAAYQBuAGUBAAAAMgAAAdMAAACFAQAABQAAAAEAAACWAAAB0/wCAAAAAfsAAAASAGQAaQBjAHQAcwBQAGEAbgBlAQAAADIAAAHTAAAAagEAAAUAAAHoAAAB0wAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFABuAGEAdgBUAG8AbwBsAGIAYQByAQAAAAD/////AAAAAAAAAAAAAAAaAGQAaQBjAHQAaQBvAG4AYQByAHkAQgBhAHIBAAABOP////8AAAAAAAAAAA==</mainWindowState>
+ <mainWindowGeometry>AdnQywABAAAAAAGZAAAARAAABPIAAAJjAAABmwAAAFsAAATwAAACXwAAAAAAAA==</mainWindowGeometry>
  <timeForNewReleaseCheck>2013-05-21T10:59:42</timeForNewReleaseCheck>
  <skippedRelease></skippedRelease>
  <showingDictBarNames>0</showingDictBarNames>
+ <usingSmallIconsInToolbars>0</usingSmallIconsInToolbars>
+ <maxDictionaryRefsInContextMenu>20</maxDictionaryRefsInContextMenu>
 </config>
