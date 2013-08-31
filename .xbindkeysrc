@@ -28,14 +28,13 @@
 "scrot"
     Print
 
-"yakuake"
+"termite"
     F12
 
-"urxvtc.sh"
+"termite"
     Mod4 + F1
 "uzbl-browser"
     Mod4 + F3
-"urxvtc.sh -e vifm"
+"termite -e vifm"
     Mod4 + F5
-
 
