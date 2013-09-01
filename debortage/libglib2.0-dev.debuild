@@ -1,0 +1,22 @@
+#!/bin/bash
+VERSION="2.34.3" VERSION2="2.34" ARCHIVE="glib"
+
+export LD_LIBRARY_PATH="/usr/local/lib:${LD_LIBRARY_PATH}"
+DIR="$(readlink -f $(dirname $0))"
+PACKAGE="$(basename $0 .debuild)"
+WORKDIR="${DIR}/work/${PACKAGE}"
+SUDO=sudo
+# action
+
+${SUDO} aptitude install -y --add-user-tag debortage build-essential zlib1g-dev pkg-config libffi-dev libgettextpo-dev python || exit $?
+
+mkdir "${WORKDIR}" 2>/dev/null
+cd "${WORKDIR}" || exit $?
+
+wget -c "http://ftp.gnome.org/pub/gnome/sources/${ARCHIVE}/${VERSION2}/${ARCHIVE}-${VERSION}.tar.xz" -O ${ARCHIVE}-${VERSION}.tar.xz || exit $?
+
+tar xJf ${ARCHIVE}-${VERSION}.tar.xz || exit $?
+
+cd ${ARCHIVE}-${VERSION} || exit $?
+
+./configure --with-python="$(which python)" --disable-modular-tests --with-gio-module-dir=/usr/lib/x86_64-linux-gnu/gio/modules && make && ${SUDO} make install || exit $?

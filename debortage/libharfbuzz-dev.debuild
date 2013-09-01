@@ -1,0 +1,24 @@
+#!/bin/bash
+
+VERSION="0.9.20"
+ARCHIVE="harfbuzz"
+
+export LD_LIBRARY_PATH="/usr/local/lib:${LD_LIBRARY_PATH}"
+DIR="$(readlink -f $(dirname $0))"
+PACKAGE="$(basename $0 .debuild)"
+WORKDIR="${DIR}/work/${PACKAGE}"
+SUDO=sudo
+# action
+
+${SUDO} aptitude install -y --add-user-tag debortage build-essential pkg-config libglib2.0-dev libcairo2-dev libicu-dev libgraphite2-dev || exit $?
+
+mkdir "${WORKDIR}" 2>/dev/null
+cd "${WORKDIR}" || exit $?
+
+wget -c "http://www.freedesktop.org/software/${ARCHIVE}/release/${ARCHIVE}-${VERSION}.tar.bz2" -O ${ARCHIVE}-${VERSION}.tar.bz2 || exit $?
+
+tar xjf ${ARCHIVE}-${VERSION}.tar.bz2 || exit $?
+
+cd ${ARCHIVE}-${VERSION} || exit $?
+
+./configure --with-glib=yes --with-gobject-yes --with-cairo=yes --with-icu=yes --with-graphite2=yes --with-freetype=yes  && make && ${SUDO} make install || exit $?

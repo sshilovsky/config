@@ -1,0 +1,31 @@
+#!/bin/bash
+
+VERSION="1.11.92"
+CONFIGURE_FLAGS="--enable-webkit2 --disable-webkit1 --with-gtk=3.0"
+# TODO observe Features in `./configure --help`
+
+export LD_LIBRARY_PATH="/usr/local/lib:${LD_LIBRARY_PATH}"
+DIR="$(readlink -f $(dirname $0))"
+PACKAGE="$(basename $0 .debuild)"
+WORKDIR="${DIR}/work/${PACKAGE}"
+SUDO=sudo
+
+${SUDO} aptitude install -y --add-user-tag debortage build-essential pkg-config ruby bison gperf flex libwebp-dev libicu-dev libgail-3-dev libxt-dev libxml2-dev libjpeg-dev libsqlite3-dev libxslt-dev libgeoclue-dev libgtk2.0-dev libgail-dev || exit $?
+# wheezy-backports:
+${SUDO} aptitude install -y --add-user-tag debortage libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev || exit $?
+
+pkg-config --exists 'libsecret-1' || ${DIR}/libsecret-1-dev.debuild || exit $?
+pkg-config --exists 'libsoup-2.4 >= 2.40.0' || ${DIR}/libsoup2.4-dev.debuild || exit $?
+pkg-config --exists 'harfbuzz >= 0.9.7' || ${DIR}/libharfbuzz-dev.debuild || exit $?
+
+
+mkdir "${WORKDIR}" 2>/dev/null
+cd "${WORKDIR}" || exit $?
+
+wget -c "http://webkitgtk.org/releases/webkitgtk-${VERSION}.tar.xz" -O webkitgtk-${VERSION}.tar.xz || exit $?
+
+tar xJf webkitgtk-${VERSION}.tar.xz || exit $?
+
+cd webkitgtk-${VERSION} || exit $?
+
+./configure ${CONFIGURE_FLAGS} && make && ${SUDO} make install || exit $?
