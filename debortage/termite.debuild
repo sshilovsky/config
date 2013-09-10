@@ -5,6 +5,7 @@ DIR="$(readlink -f $(dirname $0))"
 USAGE="Usage: $0 action"
 WORKDIR="${DIR}/work/${PACKAGE}"
 SUDO=sudo
+# TODO split libvte off; install libvte if only not instaled yet
 
 ACCOUNT="thestinger"
 GIT_PULL_OPTS="--recurse-submodules"
