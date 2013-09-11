@@ -1,5 +1,8 @@
-Python-mode, Python in VIM
-##########################
+|logo| Python-mode, Python in VIM
+#################################
+
+.. image:: https://travis-ci.org/klen/python-mode.png?branch=develop
+    :target: https://travis-ci.org/klen/python-mode
 
 Python-mode is a vim plugin that allows you to use the pylint_, rope_, pydoc_, pyflakes_, pep8_, mccabe_ libraries in vim to provide
 features like python code looking for bugs, refactoring and some other useful things.
@@ -21,26 +24,11 @@ There is no need to install the pylint_, rope_ or any used python library on you
 - Powerful customization
 - And more, more ...
 
-See (very old) screencast here: http://t.co/3b0bzeXA (sorry for quality, this is my first screencast)
+See (very old) screencast here: http://www.youtube.com/watch?v=67OZNp9Z0CQ (sorry for quality, this is my first screencast)
+Another old presentation here: http://www.youtube.com/watch?v=YhqsjUUHj6g
 
 
 .. contents::
-
-
-Changelog
-=========
-
-## 2012-08-02 0.6.5
--------------------
-* Updated Pep8 to version 1.3.3
-* Updated Pylint to version 0.25.2
-* Fixed virtualenv support for windows users
-* Added pymode modeline ':help PythonModeModeline'
-* Added diagnostic tool ':call pymode#troubleshooting#Test()'
-* Added `PyLintAuto` command ':help PyLintAuto' 
-* Code checking is async operation now
-* More, more fast the pymode folding
-* Repaired execution of python code
 
 
 Requirements
@@ -95,7 +83,7 @@ Then rebuild **helptags** in vim::
 Troubleshooting
 ===============
 
-If your python-mode dont work, type command: ::
+If your python-mode dont work, open any python file and type command: ::
 
     :call pymode#troubleshooting#Test()
 
@@ -114,6 +102,15 @@ To change this settings, edit your ``~/.vimrc``: ::
 
     " Set key 'R' for run python code
     let g:pymode_run_key = 'R'
+
+
+Loading the Plugin
+------------------
+
+Default values: ::
+
+    " Load the whole plugin
+    let g:pymode = 1
 
 
 Show documentation
@@ -150,6 +147,7 @@ Default values: ::
 
     " Switch pylint, pyflakes, pep8, mccabe code-checkers
     " Can have multiply values "pep8,pyflakes,mcccabe"
+    " Choices are pyflakes, pep8, mccabe, pylint, pep257
     let g:pymode_lint_checker = "pyflakes,pep8,mccabe"
 
     " Skip errors and warnings
@@ -170,7 +168,7 @@ Default values: ::
     " Check code every save
     let g:pymode_lint_write = 1
 
-    " Auto open cwindow if errors be finded
+    " Auto open cwindow if errors were found
     let g:pymode_lint_cwindow = 1
 
     " Show error message if cursor placed at the error line
@@ -196,7 +194,7 @@ Default values: ::
     let g:pymode_lint_maxheight = 6
 
 
-.. note:: 
+.. note::
     Pylint options (ex. disable messages) may be defined in ``$HOME/pylint.rc``
     See pylint documentation: http://pylint-messages.wikidot.com/all-codes
 
@@ -208,6 +206,9 @@ Default values: ::
 
     " Load rope plugin
     let g:pymode_rope = 1
+
+    " Map keys for autocompletion
+    let g:pymode_rope_autocomplete_map = '<C-Space>'
 
     " Auto create and open ropeproject
     let g:pymode_rope_auto_project = 1
@@ -335,6 +336,15 @@ Default values: ::
     " Highlight exceptions
     let g:pymode_syntax_highlight_exceptions = g:pymode_syntax_all
 
+    " Highlight equal operator
+    let g:pymode_syntax_highlight_equal_operator = g:pymode_syntax_all
+
+    " Highlight stars operator
+    let g:pymode_syntax_highlight_stars_operator = g:pymode_syntax_all
+
+    " Highlight `self`
+    let g:pymode_syntax_highlight_self = g:pymode_syntax_all
+
     " For fast machines
     let g:pymode_syntax_slow_sync = 0
 
@@ -459,13 +469,15 @@ at https://github.com/klen/python-mode/issues
 Contributing
 ============
 
+See in the `AUTHORS` file.
+
 Development of pylint-mode happens at github: https://github.com/klen/python-mode
 
 
 Copyright
 =========
 
-Copyright (C) 2012 Kirill Klenov (klen_)
+Copyright © 2013 Kirill Klenov (klen_)
 
     **Rope**
         Copyright (C) 2006-2010 Ali Gholami Rudi
@@ -502,7 +514,7 @@ License
 
 Licensed under a `GNU lesser general public license`_.
 
-If you like this plugin, you can send me postcard :) 
+If you like this plugin, you can send me postcard :)
 My address is here: "Russia, 143401, Krasnogorsk, Shkolnaya 1-19" to "Kirill Klenov".
 **Thanks for support!**
 
@@ -516,3 +528,4 @@ My address is here: "Russia, 143401, Krasnogorsk, Shkolnaya 1-19" to "Kirill Kle
 .. _pathogen: https://github.com/tpope/vim-pathogen
 .. _pep8: http://pypi.python.org/pypi/pep8
 .. _mccabe: http://en.wikipedia.org/wiki/Cyclomatic_complexity
+.. |logo| image:: https://raw.github.com/klen/python-mode/develop/logo.png
