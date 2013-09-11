@@ -59,3 +59,6 @@ endif
 set backupext=.bak
 set backup
 
+" Disable pylint checking every save
+let g:pymode_lint_write = 0
+
