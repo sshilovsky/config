@@ -1,4 +1,4 @@
-#--with-gio-module-dir=/usr/lib/x86_64-linux-gnu/gio/modules !/bin/bash
+#!/bin/bash
 VERSION="0.2.2"
 ARCHIVE="bashrun2"
 
