@@ -1,0 +1,23 @@
+#--with-gio-module-dir=/usr/lib/x86_64-linux-gnu/gio/modules !/bin/bash
+VERSION="0.2.2"
+ARCHIVE="bashrun2"
+
+export LD_LIBRARY_PATH="/usr/local/lib:${LD_LIBRARY_PATH}"
+DIR="$(readlink -f $(dirname $0))"
+PACKAGE="$(basename $0 .debuild)"
+WORKDIR="${DIR}/work/${PACKAGE}"
+SUDO=sudo
+# action
+
+${SUDO} aptitude install -y --add-user-tag debortage build-essential libx11-dev xterm || exit $?
+
+mkdir "${WORKDIR}" 2>/dev/null
+cd "${WORKDIR}" || exit $?
+
+wget -c "http://${ARCHIVE}.googlecode.com/files/${ARCHIVE}-${VERSION}.tar.gz" -O ${ARCHIVE}-${VERSION}.tar.gz || exit $?
+
+tar xzf ${ARCHIVE}-${VERSION}.tar.gz || exit $?
+
+cd ${ARCHIVE}-${VERSION} || exit $?
+
+./configure && make && ${SUDO} make install || exit $?
