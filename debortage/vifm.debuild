@@ -1,0 +1,23 @@
+#!/bin/bash
+VERSION="0.7.5"
+ARCHIVE="vifm"
+
+export LD_LIBRARY_PATH="/usr/local/lib:${LD_LIBRARY_PATH}"
+DIR="$(readlink -f $(dirname $0))"
+PACKAGE="$(basename $0 .debuild)"
+WORKDIR="${DIR}/work/${PACKAGE}"
+SUDO=sudo
+# action
+
+${SUDO} aptitude install -y --add-user-tag debortage build-essential libncursesw5-dev || exit $?
+
+mkdir "${WORKDIR}" 2>/dev/null
+cd "${WORKDIR}" || exit $?
+
+wget -c "http://garr.dl.sourceforge.net/project/${ARCHIVE}/${ARCHIVE}/${ARCHIVE}-${VERSION}.tar.bz2" -O ${ARCHIVE}-${VERSION}.tar.bz2 || exit $?
+
+tar xjf ${ARCHIVE}-${VERSION}.tar.bz2 || exit $?
+
+cd ${ARCHIVE}-${VERSION} || exit $?
+
+./configure && make && ${SUDO} make install || exit $?
