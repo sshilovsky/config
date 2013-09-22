@@ -1,7 +1,5 @@
 PATH="${HOME}/bin:${PATH}"
 
-[ "${TERM}" = "xterm-termite" ] && [ ! -e "/usr/share/terminfo/x/xterm-termite" ] && TERM=xterm
-
 bindkey -v
 
 autoload -U promptinit
