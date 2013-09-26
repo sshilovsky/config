@@ -1,0 +1,23 @@
+#!/bin/bash
+VERSION="3.3.2"
+
+export LD_LIBRARY_PATH="/usr/local/lib:${LD_LIBRARY_PATH}"
+DIR="$(readlink -f $(dirname $0))"
+PACKAGE="$(basename $0 .debuild)"
+WORKDIR="${DIR}/work/${PACKAGE}"
+SUDO=sudo
+# action
+ARCHIVE="Python"
+
+${SUDO} aptitude install -y --add-user-tag debortage build-essential libexpat-dev libbz2-dev libncursesw5-dev libffi-dev libssl-dev zlib1g-dev libdb-dev libgdbm-dev libreadline-dev libsqlite3-dev tk-dev || exit $?
+
+mkdir "${WORKDIR}" 2>/dev/null
+cd "${WORKDIR}" || exit $?
+
+wget -c "http://www.python.org/ftp/python/${VERSION}/${ARCHIVE}-${VERSION}.tar.xz" -O ${ARCHIVE}-${VERSION}.tar.xz || exit $?
+
+tar xJf ${ARCHIVE}-${VERSION}.tar.xz || exit $?
+
+cd ${ARCHIVE}-${VERSION} || exit $?
+
+./configure --enable-shared --enable-loadable-sqlite-extensions --enable-ipv6 --with-signal-module --with-threads --with-doc-strings --with-system-expat && make && ${SUDO} make install || exit $?
