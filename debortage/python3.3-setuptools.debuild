@@ -1,0 +1,19 @@
+#!/bin/bash
+VERSION="0.7.5"
+ARCHIVE="vifm"
+
+export LD_LIBRARY_PATH="/usr/local/lib:${LD_LIBRARY_PATH}"
+DIR="$(readlink -f $(dirname $0))"
+PACKAGE="$(basename $0 .debuild)"
+WORKDIR="${DIR}/work/${PACKAGE}"
+SUDO=sudo -E
+# action
+
+which python3.3 || "${DIR}/python3.3.debuild" || exit $?
+
+mkdir "${WORKDIR}" 2>/dev/null
+cd "${WORKDIR}" || exit $?
+
+wget --no-check-certificate -c https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py || exit $?
+${SUDO} python3.3 ez_setup.py --insecure
+
