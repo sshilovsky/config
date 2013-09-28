@@ -1,2 +1,3 @@
 export LD_LIBRARY_PATH="/usr/local/lib:${LD_LIBRARY_PATH}"
 export XDG_CONFIG_DIRS="/usr/local/etc/xdg/:${XDG_CONFIG_DIRS}"
+export PYTHONPATH="/usr/lib/python3/dist-packages/:${PYTHONPATH}"
