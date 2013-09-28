@@ -5,6 +5,8 @@ nohup xset dpms 0 0 0 >>~/log/xset.log &
 nohup xbindkeys >>~/log/xbindkeys.log &
 nohup qmpdclient >>~/log/qmpdclient &
 nohup goldendict >>~/log/goldendict &
+nohup skype >>~/log/skype &
+nohup psi >>~/log/psi &
 
 termite >/dev/null &
 
