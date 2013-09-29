@@ -1,0 +1,14 @@
+#!/bin/bash
+DIR="$(readlink -f $(dirname $0))"
+PACKAGE="$(basename $0 .debuild)"
+WORKDIR="${DIR}/work/${PACKAGE}"
+# action
+
+aptitude install -y --add-user-tag debortage build-essential libxml2-dev libxslt1-dev || exit $?
+
+which easy_install-3.3 >/dev/null || "${DIR}/python3.3-setuptools.debuild" || exit $?
+
+mkdir "${WORKDIR}" 2>/dev/null
+cd "${WORKDIR}" || exit $?
+
+easy_install-3.3 lxml
