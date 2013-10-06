@@ -1,4 +1,4 @@
-PATH="${HOME}/bin:${PATH}"
+export PATH="${HOME}/bin:${PATH}"
 
 if [ "$(hostname)" = "ss-netb" ]
 then
