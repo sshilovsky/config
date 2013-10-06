@@ -1,4 +1,5 @@
 #!/bin/sh
+. ~/.profile
 
 nohup xset dpms 0 0 0 >>~/log/xset.log &
 
