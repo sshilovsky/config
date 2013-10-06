@@ -1,5 +1,10 @@
 PATH="${HOME}/bin:${PATH}"
 
+if [ "$(hostname)" = "ss-netb" ]
+then
+    export MPD_HOST="4stz5v6S@localhost"
+fi
+
 bindkey -v
 
 autoload -U promptinit
