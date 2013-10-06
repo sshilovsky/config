@@ -1,0 +1,2 @@
+SUBSYSTEMS=="usb", ACTION=="add", ENV{ID_FS_UUID}=="48F09803F097F582", RUN+="/bin/bash -c 'nohup /etc/udev/mount-storage.sh &'"
+SUBSYSTEMS=="usb", ACTION=="remove", ENV{ID_FS_UUID}=="48F09803F097F582", RUN+="/bin/bash -c 'nohup /etc/udev/umount-storage.sh &'"
