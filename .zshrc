@@ -1,10 +1,5 @@
 export PATH="${HOME}/bin:${PATH}"
 
-if [ "$(hostname)" = "ss-netb" ]
-then
-    export MPD_HOST="4stz5v6S@localhost"
-fi
-
 bindkey -v
 
 autoload -U promptinit
@@ -42,6 +37,18 @@ bindkey "^W" backward-kill-word
 bindkey "^H" backward-delete-char
 bindkey "^U" backward-kill-line
 bindkey "^?" backward-delete-char
+
+echo asdfqwer
+if [ -d ~/.zshrc.d ]
+then
+    echo asdf
+    for i in ~/.zshrc.d/*
+    do
+        echo $i
+        . $i
+    done
+    unset i
+fi
 
 # # Lines configured by zsh-newuser-install
 # HISTFILE=~/.histfile
