@@ -38,13 +38,10 @@ bindkey "^H" backward-delete-char
 bindkey "^U" backward-kill-line
 bindkey "^?" backward-delete-char
 
-echo asdfqwer
 if [ -d ~/.zshrc.d ]
 then
-    echo asdf
     for i in ~/.zshrc.d/*
     do
-        echo $i
         . $i
     done
     unset i
