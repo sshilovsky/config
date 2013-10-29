@@ -39,4 +39,6 @@
     Mod4 + F3
 "termite -e vifm"
     Mod4 + F5
+"dolphin"
+    Mod4 + Shift + F5
 
