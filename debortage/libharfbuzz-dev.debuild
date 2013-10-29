@@ -21,4 +21,4 @@ tar xjf ${ARCHIVE}-${VERSION}.tar.bz2 || exit $?
 
 cd ${ARCHIVE}-${VERSION} || exit $?
 
-./configure --with-glib=yes --with-gobject-yes --with-cairo=yes --with-icu=yes --with-graphite2=yes --with-freetype=yes  && make && ${SUDO} make install || exit $?
+./configure --with-glib=yes --with-gobject-yes --with-cairo=yes --with-icu=yes --with-graphite2=yes --with-freetype=yes  && make && ${SUDO} make install && ${SUDO} ldconfig || exit $?

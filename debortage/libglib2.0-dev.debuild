@@ -19,4 +19,4 @@ tar xJf ${ARCHIVE}-${VERSION}.tar.xz || exit $?
 
 cd ${ARCHIVE}-${VERSION} || exit $?
 
-./configure --with-python="$(which python)" --disable-modular-tests --with-gio-module-dir=/usr/lib/x86_64-linux-gnu/gio/modules && make && ${SUDO} make install || exit $?
+./configure --with-python="$(which python)" --disable-modular-tests --with-gio-module-dir=/usr/lib/x86_64-linux-gnu/gio/modules && make && ${SUDO} make install && ${SUDO} ldconfig || exit $?

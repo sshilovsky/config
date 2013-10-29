@@ -24,5 +24,5 @@ tar xJf ${ARCHIVE}-${VERSION}.tar.xz || exit $?
 
 cd ${ARCHIVE}-${VERSION} || exit $?
 
-./configure --without-gnome --disable-glibtest --disable-tls-check && make && ${SUDO} make install || exit $?
+./configure --without-gnome --disable-glibtest --disable-tls-check && make && ${SUDO} make install && ${SUDO} ldconfig || exit $?
 

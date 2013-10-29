@@ -28,4 +28,4 @@ tar xJf webkitgtk-${VERSION}.tar.xz || exit $?
 
 cd webkitgtk-${VERSION} || exit $?
 
-./configure ${CONFIGURE_FLAGS} && make && ${SUDO} make install || exit $?
+./configure ${CONFIGURE_FLAGS} && make && ${SUDO} make install && ${SUDO} ldconfig || exit $?
