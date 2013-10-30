@@ -46,6 +46,10 @@ noremap <Leader>ss iSergei Shilovsky <sshilovsky@gmail.com><ESC>
 noremap ; q:
 nnoremap <Space> i
 
+map <F9> :update<bar>make<CR>
+map <C-F9> :update<bar>make run<CR>
+map <S-F9> :update<bar>make gdb<CR>
+
 set ruler
 set showcmd
 
