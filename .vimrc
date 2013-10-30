@@ -23,9 +23,9 @@ autocmd!
 " Autosource ~/.vimrc on modifying
 autocmd bufwritepost ~/.vimrc source %
 " Autorun NERDTree on starting vim
-autocmd vimenter * NERDTree | wincmd p
+" autocmd vimenter * NERDTree | wincmd p
 " Autoquit vim when only NERDTree left: https://github.com/scrooloose/nerdtree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 augroup END
 
 set mouse=a
@@ -49,6 +49,8 @@ nnoremap <Space> i
 map <F9> :update<bar>make<CR>
 map <C-F9> :update<bar>make run<CR>
 map <S-F9> :update<bar>make gdb<CR>
+
+map <F5> :NERDTree<CR>
 
 set ruler
 set showcmd
