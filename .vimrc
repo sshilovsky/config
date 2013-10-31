@@ -46,9 +46,9 @@ noremap <Leader>ss iSergei Shilovsky <sshilovsky@gmail.com><ESC>
 noremap ; q:
 nnoremap <Space> i
 
-map <F9> :update<bar>make<CR>
-map <C-F9> :update<bar>make run<CR>
-map <S-F9> :update<bar>make gdb<CR>
+map <F9> :make<CR>
+map <C-F9> :make run<CR>
+map <S-F9> :make gdb<CR>
 
 map <F5> :NERDTree<CR>
 
@@ -65,3 +65,7 @@ set backup
 " Disable pylint checking every save
 let g:pymode_lint_write = 0
 
+set wildignore=*.o,a.out
+
+set hidden
+set autowrite
