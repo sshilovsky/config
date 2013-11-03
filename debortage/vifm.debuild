@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION="0.7.5"
+VERSION="0.7.6"
 ARCHIVE="vifm"
 
 export LD_LIBRARY_PATH="/usr/local/lib:${LD_LIBRARY_PATH}"
