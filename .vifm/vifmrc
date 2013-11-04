@@ -314,4 +314,4 @@ nmap <f6> :move<cr>
 nmap <f7> :mkdir<space>
 nmap <f8> :delete<cr>
 
-set cpoptions=s
+set cpoptions=
