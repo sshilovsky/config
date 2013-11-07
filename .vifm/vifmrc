@@ -152,15 +152,9 @@ command vgrep vim "+grep %a"
 " You can also add %CLEAR if you want to clear screen before running FUSE
 " program.
 
-" Pdf
-filetype *.pdf zathura %f,apvlv %f,xpdf %f
+" Pdf, PostScript, Djvu
+filextype *.pdf,*.djvu,*.ps,*.ps.gz zathura %f >/dev/null 2>/dev/null &
 fileview *.pdf pdftotext -nopgbrk %c -
-
-" PostScript
-filextype *.ps,*.ps.gz gv %c %i &
-
-" Djvu
-filextype *.djvu apvlv %f
 
 " Audio
 filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a
