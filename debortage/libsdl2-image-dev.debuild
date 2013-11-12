@@ -1,0 +1,16 @@
+#!/bin/bash
+DIR="$(readlink -f $(dirname $0))"
+PACKAGE="$(basename $0 .debuild)"
+WORKDIR="${DIR}/work/${PACKAGE}"
+SUDO=sudo
+# action
+
+${SUDO} aptitude install -y --add-user-tag debortage build-essential libsdl2-dev dh-autoreconf libjpeg-dev libpng-dev libtiff-dev || exit $?
+
+mkdir "${WORKDIR}" 2>/dev/null
+cd "${WORKDIR}" || exit $?
+
+/usr/bin/apt-get source libsdl2-image-dev || exit $?
+cd libsdl2-image-* || exit $?
+
+./configure && make && ${SUDO} make install || exit $?
