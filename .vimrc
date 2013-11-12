@@ -13,7 +13,7 @@ call pathogen#helptags()
 syntax enable
 colorscheme koehler
 highlight Folded guibg=darkblue guifg=white
-highlight MatchParen ctermbg=darkblue
+highlight MatchParen ctermbg=black
 
 set number
 filetype indent plugin on
