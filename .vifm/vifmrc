@@ -175,6 +175,10 @@ filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.webm
 fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob
          \ ffprobe -pretty %c 2>&1
 
+" Nintendo images
+filextype *.nes
+        \ mednafen %f
+
 " Web
 filetype *.html,*.htm links,mozilla,uzbl-browser %f %i &
 
