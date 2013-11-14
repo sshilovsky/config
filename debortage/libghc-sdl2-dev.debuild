@@ -5,8 +5,8 @@ PACKAGE="$(basename $0 .debuild)"
 WORKDIR="${DIR}/work/${PACKAGE}"
 SUDO=sudo
 
-${SUDO} aptitude install --add-user-tag debortage ghc git libghc-vector-dev libghc-text-dev || exit $?
-${SUDO} aptitude install --add-user-tag debortage -t wheezy-backports libsdl2-dev || exit $?
+${SUDO} aptitude install -y --add-user-tag debortage ghc git libghc-vector-dev libghc-text-dev || exit $?
+${SUDO} aptitude install -y --add-user-tag debortage -t wheezy-backports libsdl2-dev || exit $?
 
 mkdir "${WORKDIR}" 2>/dev/null
 cd "${WORKDIR}" || exit $?

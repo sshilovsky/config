@@ -11,7 +11,7 @@
 
 DIR="$(readlink -f $(dirname $0)/../sandbox)"
 
-umount "${DIR}/dev" 2>/dev/null
+umount "${DIR}/dev" -l 2>/dev/null
 umount "${DIR}/proc" 2>/dev/null
 umount "${DIR}/var/cache/apt/archives" 2>/dev/null
 umount "${DIR}/root/" 2>/dev/null
@@ -24,7 +24,7 @@ cp -L /etc/resolv.conf "${DIR}/etc/resolv.conf"
 
 chroot "${DIR}" /bin/sh -c 'cd /root && exec zsh'
 
-umount "${DIR}/dev"
+umount "${DIR}/dev" -l
 umount "${DIR}/proc"
 umount "${DIR}/var/cache/apt/archives"
 umount "${DIR}/root/"

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+DIR="$(readlink -f $(dirname $0))"
+PACKAGE="$(basename $0 .debuild)"
+WORKDIR="${DIR}/work/${PACKAGE}"
+SUDO=sudo
+
+${SUDO} aptitude install -y --add-user-tag debortage pkg-config ghc git || exit $?
+
+ghc-pkg list SDL2 --simple-output | grep SDL2 || ${DIR}/libghc-sdl2-dev.debuild || exit $?
+pkg-config --exists 'SDL2_image' || ${DIR}/libsdl2-image-dev.debuild || exit $?
+
+mkdir "${WORKDIR}" 2>/dev/null
+cd "${WORKDIR}" || exit $?
+
+git clone https://github.com/Lemmih/hsSDL2.git
+cd hsSDL2/hsSDL-image || exit $?
+
+${SUDO} ./Setup.lhs configure --extra-include-dirs=/usr/local/include/SDL2 && ${SUDO} ./Setup.lhs build && ${SUDO} ./Setup.lhs install

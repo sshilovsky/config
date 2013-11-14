@@ -6,7 +6,7 @@ SUDO=sudo
 # action
 
 ${SUDO} aptitude install -y --add-user-tag debortage build-essential dh-autoreconf libjpeg-dev libpng-dev libtiff-dev || exit $?
-${SUDO} aptitude install -t wheezy-backports -y --add-user-tag debortage libsdl2-dev || exit $?
+${SUDO} aptitude install -y -t wheezy-backports -y --add-user-tag debortage libsdl2-dev || exit $?
 
 mkdir "${WORKDIR}" 2>/dev/null
 cd "${WORKDIR}" || exit $?
