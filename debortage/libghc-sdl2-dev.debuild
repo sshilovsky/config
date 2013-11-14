@@ -1,0 +1,17 @@
+#!/bin/bash
+
+DIR="$(readlink -f $(dirname $0))"
+PACKAGE="$(basename $0 .debuild)"
+WORKDIR="${DIR}/work/${PACKAGE}"
+SUDO=sudo
+
+${SUDO} aptitude install --add-user-tag debortage ghc git libghc-vector-dev libghc-text-dev || exit $?
+${SUDO} aptitude install --add-user-tag debortage -t wheezy-backports libsdl2-dev || exit $?
+
+mkdir "${WORKDIR}" 2>/dev/null
+cd "${WORKDIR}" || exit $?
+
+git clone https://github.com/Lemmih/hsSDL2.git
+cd hsSDL2 || exit $?
+
+${SUDO} ./Setup.lhs configure && ${SUDO} ./Setup.lhs build && ${SUDO} ./Setup.lhs install
