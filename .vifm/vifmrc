@@ -153,7 +153,12 @@ command vgrep vim "+grep %a"
 " program.
 
 " Pdf, PostScript, Djvu
-filextype *.pdf,*.djvu,*.ps,*.ps.gz zathura %f >/dev/null 2>/dev/null &
+filextype *.pdf,*.djvu,*.ps,*.ps.gz 
+        \ zathura %f >/dev/null 2>/dev/null &
+
+filextype *.pdf,*.djvu,*.ps,*.ps.gz,*.fb2
+        \ okular %f >/dev/null 2>/dev/null &
+
 fileview *.pdf pdftotext -nopgbrk %c -
 
 " Audio
@@ -313,3 +318,5 @@ nmap <f7> :mkdir<space>
 nmap <f8> :delete<cr>
 
 set cpoptions=
+
+map <cr> :file<cr>
