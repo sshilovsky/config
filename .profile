@@ -1,8 +1,4 @@
-if [ -d ~/.profile.d ]
-then
-    for i in ~/.profile.d/*
-    do
-        . $i
-    done
-    unset i
-fi
+export EDITOR="$(which vim)"
+export MPD_HOST="4stz5v6S@localhost"
+export PATH="${HOME}/bin:${HOME}/.cabal/bin:${PATH}"
+
