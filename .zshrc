@@ -1,5 +1,3 @@
-export PATH="${HOME}/bin:${HOME}/.cabal/bin:${PATH}"
-
 bindkey -v
 
 autoload -U promptinit
