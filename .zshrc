@@ -1,4 +1,4 @@
-export PATH="${HOME}/bin:${PATH}"
+export PATH="${HOME}/bin:${HOME}/.cabal/bin:${PATH}"
 
 bindkey -v
 
