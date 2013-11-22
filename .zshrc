@@ -6,8 +6,6 @@ prompt bigfade
 
 alias irssi='tmux-session irssi irssi'
 alias rtorrent='tmux-session rtorrent rtorrent'
-alias apt-get='aptitude'
-# alias 'sudo apt-get' implemented with bin/sudo
 alias cave='sudo cave -c yes'
 alias sudoedit="env EDITOR=$EDITOR sudoedit"
 
