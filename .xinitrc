@@ -1,6 +1,8 @@
 #!/bin/sh
 . ~/.profile
 
+setxkbmap -layout us,ru -option -option caps:escape,grp:toggle
+
 nohup xset dpms 0 0 0 >>~/log/xset.log &
 
 nohup xbindkeys >>~/log/xbindkeys.log &
