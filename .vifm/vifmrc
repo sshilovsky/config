@@ -170,7 +170,7 @@ filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a
 fileviewer *.mp3 mp3info
 
 " Video
-filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.webm
+filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.webm,*.m4v
         \ mplayer %f >/dev/null 2>/dev/null &,
         \ {Fullscreen}
         \ mplayer -fs %f >/dev/null 2>/dev/null &,
