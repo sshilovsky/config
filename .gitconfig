@@ -4,3 +4,5 @@
 [core]
 	excludesfile = ~/.cvsignore
     editor = vim
+[push]
+	default = matching
