@@ -1,5 +1,5 @@
-#!/bin/sh
-. ~/.profile
+#!/bin/bash
+source ~/.profile
 
 setxkbmap -layout us,ru -option -option caps:escape,grp:toggle
 
