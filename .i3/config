@@ -17,9 +17,6 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec termite
-
 # kill focused window
 bindsym $mod+Shift+Q kill
 

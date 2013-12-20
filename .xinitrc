@@ -11,7 +11,7 @@ nohup goldendict >>~/log/goldendict &
 nohup skype >>~/log/skype &
 nohup psi >>~/log/psi &
 
-termite >/dev/null &
+x-terminal-emulator >/dev/null &
 
 exec nohup i3 >>~/log/i3.log
 exec nohup startkde >>~/log/startkde.log
