@@ -53,6 +53,8 @@ map <S-F9> :make gdb<CR>
 
 map <F5> :NERDTree<CR>
 
+imap <C-^> <Esc><C-^>
+
 set ruler
 set showcmd
 
