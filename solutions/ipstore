@@ -1,0 +1,26 @@
+#!/usr/bin/env expect
+
+set timeout 2
+set TEMPFILE /tmp/ipstore.tmp
+
+spawn bash -c "( date ; telnet adsl ) | tee $TEMPFILE"
+
+expect "Login: "
+send "admin\r"
+
+expect "Password: "
+send "admin\r"
+
+expect "> "
+send "wan show\r"
+
+expect "> "
+send "logout\r"
+
+wait
+close
+
+system scp -qC $TEMPFILE sshilovsky@ssh.alwaysdata.com:/home/sshilovsky/www/adsl.log
+
+system rm $TEMPFILE
+
