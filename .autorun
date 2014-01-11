@@ -1,0 +1,7 @@
+#!/bin/bash
+
+xbindkeys &
+qmpdclient &
+goldendict &
+skype &
+psi &
