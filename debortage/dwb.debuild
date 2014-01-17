@@ -1,0 +1,22 @@
+#!/bin/bash
+#VERSION=""
+BRANCH="master"
+ARCHIVE="dwb"
+
+DIR="$(readlink -f $(dirname $0))"
+PACKAGE="$(basename $0 .debuild)"
+WORKDIR="${DIR}/work/${PACKAGE}"
+
+aptitude install -y --add-user-tag debortage build-essential libsoup2.4-dev libwebkitgtk-dev m4 libgnutls-dev libjson-c-dev libjavascriptcoregtk-1.0-dev libglib2.0-dev || exit $?
+
+mkdir "${WORKDIR}" 2>/dev/null
+cd "${WORKDIR}" || exit $?
+
+#wget -c "http://garr.dl.sourceforge.net/project/${ARCHIVE}/${ARCHIVE}/${ARCHIVE}-${VERSION}.tar.bz2" -O ${ARCHIVE}-${VERSION}.tar.bz2 || exit $?
+git clone https://portix@bitbucket.org/portix/dwb.git
+
+#tar xjf ${ARCHIVE}-${VERSION}.tar.bz2 || exit $?
+
+cd dwb || exit $?
+
+make PREFIX=/usr/local GTK=2 && make install PREFIX=/usr/local GTK=2 || exit $?
