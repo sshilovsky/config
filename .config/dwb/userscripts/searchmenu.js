@@ -32,7 +32,6 @@ Signal.connect("contextMenu", function (wv, menu) {
         menu.addItems([{   
             label: "Search with "+entry.host,
             callback: function() {
-                io.print(entry.shortcut);
                 execute("tabopen "+entry.shortcut+" "+text);
             }
         }])
