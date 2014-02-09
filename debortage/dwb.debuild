@@ -1,6 +1,6 @@
 #!/bin/bash
 #VERSION=""
-BRANCH="master"
+#BRANCH="master"
 ARCHIVE="dwb"
 
 DIR="$(readlink -f $(dirname $0))"
@@ -13,10 +13,16 @@ mkdir "${WORKDIR}" 2>/dev/null
 cd "${WORKDIR}" || exit $?
 
 #wget -c "http://garr.dl.sourceforge.net/project/${ARCHIVE}/${ARCHIVE}/${ARCHIVE}-${VERSION}.tar.bz2" -O ${ARCHIVE}-${VERSION}.tar.bz2 || exit $?
-git clone https://portix@bitbucket.org/portix/dwb.git
+if [ -d dwb ]
+then
+    cd dwb || exit $?
+    git pull
+else
+    git clone https://portix@bitbucket.org/portix/dwb.git || exit $?
+    cd dwb || exit $?
+fi
 
 #tar xjf ${ARCHIVE}-${VERSION}.tar.bz2 || exit $?
 
-cd dwb || exit $?
 
 make PREFIX=/usr/local GTK=2 && make install PREFIX=/usr/local GTK=2 || exit $?
