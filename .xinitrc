@@ -8,7 +8,7 @@ xset dpms 0 0 0 &
 #exec startkde
 
 ~/.autorun &
-trayer &
+lxpanel &
 x-terminal-emulator &
 
-exec i3
+exec openbox
