@@ -1,7 +1,6 @@
 #!/bin/bash
 
 xbindkeys &
-~/bin/craftbar &
 qmpdclient &
 goldendict &
 skype &
