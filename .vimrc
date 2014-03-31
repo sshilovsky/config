@@ -47,9 +47,9 @@ noremap <Leader>ss iSergei Shilovsky <sshilovsky@gmail.com><ESC>
 noremap ; q:
 nnoremap <Space> i
 
-map <F9> :make<CR>
-map <C-F9> :make run<CR>
-map <S-F9> :make gdb<CR>
+map <F9> :make -f ~/.vim/universal.mk<CR>
+map <C-F9> :make! -f ~/.vim/universal.mk run<CR>
+map <F10> :make! -f ~/.vim/universal.mk gdb<CR>
 
 map <F5> :NERDTree<CR>
 
