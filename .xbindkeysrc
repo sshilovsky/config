@@ -1,4 +1,6 @@
 "mpc toggle"
+    XF86AudioMute
+"mpc toggle"
     XF86AudioPlay
 "mpc toggle"
     Mod4 + Pause
