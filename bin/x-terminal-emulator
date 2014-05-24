@@ -1,2 +1,15 @@
 #!/bin/bash
-exec xterm $@
+
+TMUX=
+XTERM="xterm -geometry 80x26"
+COMMAND=$SHELL
+
+if [[ $1 = "-e" ]] ; then
+    COMMAND=$2
+fi
+
+if which tmux ; then
+    exec $XTERM -e "tmux new-session 'tmux set-option destroy-unattached on ; exec $COMMAND'"
+else
+    exec $XTERM -e $COMMAND
+fi
