@@ -21,6 +21,7 @@ set vicmd=vim
 " This probably shouldn't be an option.
 
 set trash
+set trashdir=%r/.vifm-Trash,$HOME/.vifm/Trash
 
 " This is how many directories to store in the directory history.
 
@@ -126,6 +127,9 @@ command run !! ./%f
 command make !!make
 command vgrep vim "+grep %a"
 
+filetype *.zip 
+        \ unzip -x %f
+
 " The file type is for the default programs to be used with
 " a file extension.
 " :filetype pattern1,pattern2 defaultprogram,program2
@@ -170,7 +174,7 @@ filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a
 fileviewer *.mp3 mp3info
 
 " Video
-filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.webm,*.m4v
+filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.webm,*.m4v,*.mp4,*.rm
         \ mplayer %f >/dev/null 2>/dev/null &,
         \ {Fullscreen}
         \ mplayer -fs %f >/dev/null 2>/dev/null &,
