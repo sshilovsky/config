@@ -5,5 +5,5 @@ craftbar &
 qmpdclient &
 goldendict &
 skype &
-psi &
+if which psi-plus; then psi-plus; else psi; fi &
 konversation &
