@@ -8,7 +8,7 @@ xset dpms 0 0 0 &
 #exec startkde
 
 ~/.autorun &
-lxpanel &
+fbpanel &
 x-terminal-emulator &
 
 exec openbox
