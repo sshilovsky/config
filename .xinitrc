@@ -10,5 +10,6 @@ xset dpms 0 0 0 &
 ~/.autorun &
 fbpanel &
 x-terminal-emulator &
+caja --no-default-window &
 
 exec openbox
