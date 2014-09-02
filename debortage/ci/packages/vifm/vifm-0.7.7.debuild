@@ -9,11 +9,12 @@ PNV="${PNVR}"
 PN="$(echo "$PNV"|rev|cut -d- -f2-|rev)"
 PV="$(echo "$PNV"|rev|cut -d- -f1|rev)"
 
-WORKDIR="$(readlink -f $(dirname $0))/../../work/${PNVR}"
+DEBORTAGEDIR="$(readlink -f $(dirname $0)/../..)"
+WORKDIR="${DEBORTAGEDIR}/work/${PNVR}"
 
 # --------------------------------------
 
-BDEPEND="build-essential libncursesw5-dev"
+BDEPEND="build-essential checkinstall libncursesw5-dev"
 RDEPEND="libncursesw5"
 
 ARCHIVEDIR="${WORKDIR}/${PNV}"
@@ -21,7 +22,6 @@ ARCHIVE="${PNV}.tar.bz2"
 DOWNLOAD="http://downloads.sourceforge.net/project/${PN}/${PN}/${ARCHIVE}"
 LICENSE="GPL-2"
 MAINTAINER="Sergei Shilovsky <sshilovsky@gmail.com>"
-SUMMARY="asdfasdfasdf"
 
 # --------------------------------------
 
@@ -57,4 +57,4 @@ cd ${ARCHIVEDIR} || exit $?
 
 # deb
 
-checkinstall -D -y --fstrans --pkgname "${PN}" --pkgversion "${PV}" --pkglicense "${LICENSE}" --pkgsource "${DOWNLOAD}" --maintainer "${MAINTAINER}" --requires "${RDEPEND}" --nodoc --pakdir ${WORKDIR} || exit $?
+checkinstall -D -y --fstrans --pkgname "${PN}" --pkgversion "${PV}" --pkglicense "${LICENSE}" --pkgsource "${DOWNLOAD}" --maintainer "${MAINTAINER}" --requires "${RDEPEND}" --nodoc --pakdir "${DEBORTAGEDIR}/debs" || exit $?
