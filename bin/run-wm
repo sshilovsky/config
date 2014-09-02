@@ -6,5 +6,5 @@ then
     exec i3
 fi
 
-lxpanel &
+fbpanel &
 exec openbox

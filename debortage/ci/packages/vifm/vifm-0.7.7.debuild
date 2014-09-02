@@ -1,0 +1,60 @@
+#!/bin/bash
+
+# TODO lock
+
+PNVR="$(basename $0 .debuild)"
+# TODO revision
+PNV="${PNVR}"
+
+PN="$(echo "$PNV"|rev|cut -d- -f2-|rev)"
+PV="$(echo "$PNV"|rev|cut -d- -f1|rev)"
+
+WORKDIR="$(readlink -f $(dirname $0))/../../work/${PNVR}"
+
+# --------------------------------------
+
+BDEPEND="build-essential libncursesw5-dev"
+RDEPEND="libncursesw5"
+
+ARCHIVEDIR="${WORKDIR}/${PNV}"
+ARCHIVE="${PNV}.tar.bz2"
+DOWNLOAD="http://downloads.sourceforge.net/project/${PN}/${PN}/${ARCHIVE}"
+LICENSE="GPL-2"
+MAINTAINER="Sergei Shilovsky <sshilovsky@gmail.com>"
+SUMMARY="asdfasdfasdf"
+
+# --------------------------------------
+
+mkdir -p ${WORKDIR} || exit $?
+cd ${WORKDIR} || exit $?
+
+aptitude install -y ${BDEPEND} || exit $?
+
+# fetch
+
+wget -c "${DOWNLOAD}" -O "${ARCHIVE}" || exit $?
+
+# prepare
+
+if   [[ "${ARCHIVE}" == *.tar.bz2 ]] ; then UNPACK="j"
+elif [[ "${ARCHIVE}" == *.tbz2 ]] ; then UNPACK="j"
+elif [[ "${ARCHIVE}" == *.tar.gz ]] ; then UNPACK="z"
+elif [[ "${ARCHIVE}" == *.tgz ]] ; then UNPACK="z"
+elif [[ "${ARCHIVE}" == *.tar.xz ]] ; then UNPACK="J"
+elif [[ "${ARCHIVE}" == *.tar ]] ; then UNPACK=""
+else
+    echo "Unknown archive format" >/dev/stderr
+    exit 1
+fi
+
+tar "x${UNPACK}f" "${ARCHIVE}" || exit $?
+
+
+# make
+
+cd ${ARCHIVEDIR} || exit $?
+./configure && make || exit $?
+
+# deb
+
+checkinstall -D -y --fstrans --pkgname "${PN}" --pkgversion "${PV}" --pkglicense "${LICENSE}" --pkgsource "${DOWNLOAD}" --maintainer "${MAINTAINER}" --requires "${RDEPEND}" --nodoc --pakdir ${WORKDIR} || exit $?

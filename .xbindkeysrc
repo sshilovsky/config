@@ -44,6 +44,6 @@
     Mod4 + F3
 "x-terminal-emulator -e vifm"
     Mod4 + F5
-"dolphin"
+"x-file-manager"
     Mod4 + Shift + F5
 
