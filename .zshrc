@@ -43,6 +43,8 @@ then
     unset i
 fi
 
+alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
+
 # # Lines configured by zsh-newuser-install
 # HISTFILE=~/.histfile
 # HISTSIZE=1000
