@@ -1,0 +1,9 @@
+[new]
+tags=new;inbox;unread
+ignore=
+
+[search]
+exclude_tags=deleted;spam
+
+[maildir]
+synchronize_flags=false

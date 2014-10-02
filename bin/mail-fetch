@@ -1,0 +1,9 @@
+#!/bin/sh
+
+nmbug fetch &&
+offlineimap &&
+notmuch new &&
+nmbug merge &&
+#mail-sort &&
+true
+
