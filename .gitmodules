@@ -7,3 +7,6 @@
 [submodule ".vim/bundle/ghcmod-vim"]
 	path = .vim/bundle/ghcmod-vim
 	url = https://github.com/eagletmt/ghcmod-vim.git
+[submodule "src/notmuch"]
+	path = src/notmuch
+	url = git://notmuchmail.org/git/notmuch
