@@ -6,5 +6,6 @@ then
     exec i3
 fi
 
+caja --no-default-window &
 fbpanel &
 exec openbox
