@@ -1,0 +1,1 @@
+../../../../src/notmuch/vim/notmuch.txt
