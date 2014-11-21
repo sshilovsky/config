@@ -32,12 +32,6 @@
 
 "x-terminal-emulator"
     Mod4 + Return
-
-"x-terminal-emulator"
-    F12
-
-"x-terminal-emulator"
-    Mod4 + F1
 "gmrun"
     Mod4 + F2
 "uzbl-browser"
