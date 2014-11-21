@@ -15,14 +15,14 @@
 "mpc next"
     Mod4 + Next
 
-"mpc volume -5"
+"amixer set Master 5%-"
     XF86AudioLowerVolume
-"mpc volume -5"
+"amixer set Master 5%-"
     Mod4 + 9
 
-"mpc volume +5"
+"amixer set Master 5%+"
     XF86AudioRaiseVolume
-"mpc volume +5"
+"amixer set Master 5%+"
     Mod4 + 0
 
 
