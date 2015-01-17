@@ -41,3 +41,5 @@
 "x-file-manager"
     Mod4 + Shift + F5
 
+"killall -SIGUSR1 switch-mode.sh"
+    Mod4 + F12
