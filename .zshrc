@@ -3,6 +3,7 @@ bindkey -v
 autoload -U promptinit
 promptinit
 prompt bigfade
+RPROMPT='[%?]'
 
 alias irssi='tmux-session irssi irssi'
 alias rtorrent='tmux-session rtorrent rtorrent'

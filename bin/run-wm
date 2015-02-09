@@ -3,6 +3,14 @@
 HOST=$(hostname)
 if [ "$HOST" = "ss-netb250" ]
 then
+    trayer &
+    exec i3
+fi
+
+if [ "$HOST" = "ss-terra-jessie" -o "$HOST" = "ss-terra-gentoo" ]
+then
+    ~/bin/switch-mode.sh &
+    trayer &
     exec i3
 fi
 

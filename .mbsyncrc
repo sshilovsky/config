@@ -1,0 +1,23 @@
+Create Slave
+Expunge None
+CopyArrivalDate yes
+
+MaildirStore gmail-local
+MaxSize 1m
+Path ~/mail/
+
+IMAPAccount gmail
+Host imap.gmail.com
+User sshilovsky@gmail.com
+PassCmd "cat ~/.encfs-mountpoint/sshilovsky@gmail.com"
+UseIMAPS yes
+
+IMAPStore gmail-remote
+Account gmail
+
+Channel gmail
+Master :gmail-remote:
+Slave :gmail-local:
+Pattern "*All Mail"
+Pattern *Spam
+Sync Pull New

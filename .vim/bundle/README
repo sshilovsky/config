@@ -14,4 +14,11 @@ But some of them are already converted.
     URL: https://github.com/Shougo/vimproc.vim
     ACT: have to be compiled with its Makefile
 
+4. notmuch is.
+    URL: git://notmuchmail.org/git/notmuch
+    DEP: notmuch, ruby-notmuch
+        NB: ruby-notmuch is built separately
+    
+
+
 # vim: ft=

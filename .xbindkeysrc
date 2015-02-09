@@ -15,14 +15,14 @@
 "mpc next"
     Mod4 + Next
 
-"mpc volume -5"
+"amixer set Master 5%-"
     XF86AudioLowerVolume
-"mpc volume -5"
+"amixer set Master 5%-"
     Mod4 + 9
 
-"mpc volume +5"
+"amixer set Master 5%+"
     XF86AudioRaiseVolume
-"mpc volume +5"
+"amixer set Master 5%+"
     Mod4 + 0
 
 
@@ -32,18 +32,14 @@
 
 "x-terminal-emulator"
     Mod4 + Return
-
-"x-terminal-emulator"
-    F12
-
-"x-terminal-emulator"
-    Mod4 + F1
 "gmrun"
     Mod4 + F2
-"uzbl-browser"
+"x-www-browser"
     Mod4 + F3
 "x-terminal-emulator -e vifm"
     Mod4 + F5
 "x-file-manager"
     Mod4 + Shift + F5
 
+"killall -SIGUSR1 switch-mode.sh"
+    Mod4 + F12

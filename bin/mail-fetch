@@ -1,9 +1,10 @@
 #!/bin/sh
 
 nmbug fetch &&
-offlineimap &&
+mbsync -a &&
 notmuch new &&
 nmbug merge &&
-#mail-sort &&
+mail-sort &&
 true
 
+exit $?
