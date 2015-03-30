@@ -22,6 +22,28 @@ alias ,q='exit'
 alias :quit='exit'
 alias /quit='exit'
 
+function the_function()
+{
+    which eix >/dev/null 2>/dev/null
+    local EIX=$?
+    which aptitude >/dev/null 2>/dev/null
+    local APTITUDE=$?
+    which apt-cache >/dev/null 2>/dev/null
+    local APTCACHE=$?
+
+    if [ $EIX -ne 0 -a $APTITUDE -eq 0 ]
+    then
+        echo aptitude search
+    elif [ $EIX -ne 0 -a $APTCACHE -eq 0 ]
+    then
+        echo apt-cache search
+    else
+        echo eix
+    fi
+}
+alias eix="$(the_function)"
+unfunction the_function
+
 HISTSIZE=2000
 HISTFILE="$HOME/.history"
 SAVEHIST=$HISTSIZE
