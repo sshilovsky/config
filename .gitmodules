@@ -10,3 +10,6 @@
 [submodule "src/notmuch"]
 	path = src/notmuch
 	url = git://notmuchmail.org/git/notmuch
+[submodule ".vim/bundle/rust"]
+	path = .vim/bundle/rust
+	url = https://github.com/wting/rust.vim.git
