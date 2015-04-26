@@ -19,6 +19,8 @@ But some of them are already converted.
     DEP: notmuch, ruby-notmuch
         NB: ruby-notmuch is built separately
     
+5. align is.
+    URL: http://www.vim.org/scripts/script.php?script_id=294
 
 
 # vim: ft=
