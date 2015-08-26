@@ -314,9 +314,9 @@ Plugin {
     }
 }
 
-plugin {
-    type = volume
-}
+#plugin {
+#    type = volume
+#}
 
 #plugin {
 #    type = battery
