@@ -21,6 +21,7 @@ alias :q='exit'
 alias ,q='exit'
 alias :quit='exit'
 alias /quit='exit'
+alias sl='sl -e'
 
 function the_function()
 {
