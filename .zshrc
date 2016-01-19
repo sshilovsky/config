@@ -4,6 +4,9 @@ autoload -U promptinit
 promptinit
 prompt bigfade
 RPROMPT='[%?]'
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
 
 alias irssi='tmux-session irssi irssi'
 alias rtorrent='tmux-session rtorrent rtorrent'
