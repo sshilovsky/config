@@ -11,10 +11,12 @@ if [ "$HOST" = "ss-terra-jessie" -o "$HOST" = "ss-terra-gentoo" ]
 then
     touch ~/tmp0
     ~/bin/switch-mode.sh &
-    tint2 &
-    exec openbox
 fi
 
 caja --no-default-window &
+
+{sleep 10s; trayer} &
+exec i3
+
 tint2 &
 exec openbox

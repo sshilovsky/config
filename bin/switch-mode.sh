@@ -19,9 +19,9 @@ function switch()
             ;;
         *)
             mode=0
-            xrandr --output $SQUARE --mode 1280x1024 --size 1280x1024
             xrandr --output $WIDE --mode 1920x1080 --size 1920x1080
-            xrandr --auto --output $WIDE --right-of $SQUARE
+            xrandr --output $SQUARE --mode 1280x1024 --size 1280x1024
+            xrandr --auto --output $SQUARE --right-of $WIDE
             ;;
     esac
 }
