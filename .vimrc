@@ -1,5 +1,9 @@
 set nocompatible
 
+let g:pymode = 0
+let g:pymode_syntax = 1
+let NERDTreeIgnore = ['\.pyc$']
+
 " On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
 " across (heterogeneous) systems easier.
 if has('win32') || has('win64')
@@ -33,19 +37,18 @@ set mouse=a
 set backspace=indent,eol,start
 
 set shiftwidth=4
-set tabstop=4
+set tabstop=8
 set softtabstop=4
 set smarttab
 set expandtab
 set autoindent
 
-let mapleader=','
-noremap <Leader>w :update<CR>
+map <Space> <Leader>
+noremap <Leader>w :wall<CR>
 noremap <Leader>q :confirm q<CR>
 noremap <Leader>ss iSergei Shilovsky <sshilovsky@gmail.com><ESC>
 
 noremap ; q:
-nnoremap <Space> i
 
 map <F9> :make -f ~/.vim/universal.mk<CR>
 map <C-F9> :make! -f ~/.vim/universal.mk run<CR>
@@ -68,7 +71,13 @@ set backup
 " Disable pylint checking every save
 let g:pymode_lint_write = 0
 
-set wildignore=*.o,a.out
+set wildignore=*.o,a.out,*.pyc
 
 set hidden
 set autowrite
+
+set tags=./tags;/,~/.local/share/ctags/usr-local-include,~/.local/share/ctags/usr-include
+set path=.,/usr/local/include,/usr/include
+
+set hls
+set lcs=tab:>-
