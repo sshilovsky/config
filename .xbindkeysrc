@@ -4,6 +4,8 @@
     XF86AudioPlay
 "mpc toggle"
     Mod4 + Pause
+"mpc toggle"
+    Mod4 + F9
 
 "mpc prev"
     XF86AudioPrev
@@ -25,6 +27,9 @@
 "amixer set Master 5%+"
     Mod4 + 0
 
+
+"killall Robocraft.x86_64; killall -9 Hearthstone.exe"
+    Mod4 + Shift + F11
 
 
 "scrot"
