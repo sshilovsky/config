@@ -22,5 +22,9 @@ But some of them are already converted.
 5. align is.
     URL: http://www.vim.org/scripts/script.php?script_id=294
 
+6. vim-racer is.
+    URL: http://github.com/racer-rust/vim-racer
+    DEP: racer (cargo install)
+
 
 # vim: ft=
