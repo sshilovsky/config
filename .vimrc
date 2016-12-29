@@ -4,6 +4,12 @@ let g:pymode = 0
 let g:pymode_syntax = 1
 let NERDTreeIgnore = ['\.pyc$']
 
+let g:racer_cmd = "/home/sh/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+let $RUST_SRC_PATH="/home/sh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
+
+let g:SuperTabDefaultCompletionType = "context"
+
 " On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
 " across (heterogeneous) systems easier.
 if has('win32') || has('win64')
@@ -18,6 +24,8 @@ syntax enable
 colorscheme koehler
 highlight Folded guibg=darkblue guifg=white
 highlight MatchParen ctermbg=black
+
+set completeopt=longest,menuone
 
 set number
 filetype indent plugin on
