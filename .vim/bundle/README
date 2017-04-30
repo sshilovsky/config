@@ -25,4 +25,8 @@ But some of them are already converted.
 6. vim-kerboscript
     URL: git://github.com/tomvanderlee/vim-kerboscript.git
 
+7. vim-racer is.
+    URL: http://github.com/racer-rust/vim-racer
+    DEP: racer (cargo install)
+
 # vim: ft=
