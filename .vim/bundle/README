@@ -22,5 +22,7 @@ But some of them are already converted.
 5. align is.
     URL: http://www.vim.org/scripts/script.php?script_id=294
 
+6. vim-kerboscript
+    URL: git://github.com/tomvanderlee/vim-kerboscript.git
 
 # vim: ft=
