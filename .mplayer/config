@@ -1,2 +1,4 @@
 softvol=1
 framedrop=1
+sub-fuzziness=2
+subcp=enca:ru:utf-8
