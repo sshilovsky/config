@@ -1,9 +1,15 @@
 #!/bin/bash
 
 xbindkeys &
+x-terminal-emulator &
 craftbar &
+sleep 5s
+
+ps -u$USER | egrep ' i3$' && trayer &
+(qbittorrent || ktorrent) &
 qmpdclient &
 goldendict &
-skype &
-if which psi-plus; then psi-plus; else psi; fi &
-konversation &
+(apulse skype || skype || skypeforlinux) &
+Telegram &
+#if which psi-plus; then psi-plus; else psi; fi &
+#konversation &
