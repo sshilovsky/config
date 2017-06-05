@@ -26,5 +26,7 @@ But some of them are already converted.
     URL: http://github.com/racer-rust/vim-racer
     DEP: racer (cargo install)
 
+7. snipmate.
+    DEP: tlib_vim, vim-addon-mw-utils
 
 # vim: ft=
