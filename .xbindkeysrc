@@ -37,6 +37,8 @@
 
 "x-terminal-emulator"
     Mod4 + Return
+"xterm"
+    Mod4 + Shift + Return
 "gmrun"
     Mod4 + F2
 "x-www-browser"

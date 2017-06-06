@@ -7,12 +7,12 @@
 [submodule ".vim/bundle/ghcmod-vim"]
 	path = .vim/bundle/ghcmod-vim
 	url = https://github.com/eagletmt/ghcmod-vim.git
-[submodule "src/notmuch"]
-	path = src/notmuch
-	url = git://notmuchmail.org/git/notmuch
 [submodule ".vim/bundle/rust"]
 	path = .vim/bundle/rust
 	url = https://github.com/wting/rust.vim.git
+[submodule ".vim/bundle/vim-kerboscript"]
+	path = .vim/bundle/vim-kerboscript
+	url = git://github.com/tomvanderlee/vim-kerboscript.git
 [submodule ".vim/bundle/vim-racer"]
 	path = .vim/bundle/vim-racer
 	url = https://github.com/racer-rust/vim-racer.git

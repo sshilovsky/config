@@ -3,19 +3,16 @@
 HOST=$(hostname)
 if [ "$HOST" = "ss-netb250" ]
 then
-    trayer &
     exec i3
 fi
 
-if [ "$HOST" = "ss-terra-jessie" -o "$HOST" = "ss-terra-gentoo" ]
+if [ "$HOST" = "ss-terra-stretch" -o "$HOST" = "ss-terra-jessie" -o "$HOST" = "ss-terra-gentoo" ]
 then
-    touch ~/tmp0
     ~/bin/switch-mode.sh &
 fi
 
 caja --no-default-window &
 
-{sleep 10s; trayer} &
 exec i3
 
 tint2 &

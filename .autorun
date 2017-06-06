@@ -1,9 +1,14 @@
 #!/bin/bash
 
 xbindkeys &
+x-terminal-emulator &
 craftbar &
+sleep 2s
+
+(qbittorrent || ktorrent) &
 qmpdclient &
 goldendict &
-skype &
-if which psi-plus; then psi-plus; else psi; fi &
-konversation &
+(apulse skype || skype || skypeforlinux) &
+Telegram &
+#(psi-plus || psi) &
+#konversation &

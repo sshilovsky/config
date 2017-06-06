@@ -9,6 +9,7 @@ if [[ $1 = "-e" ]] ; then
 fi
 
 if which tmux ; then
+    tmux has -t config-errors 2>/dev/null || tmux new-session -s config-errors -d # push config file errors to this session
     exec $XTERM -e "tmux new-session 'tmux set-option destroy-unattached on ; exec $COMMAND'"
 else
     exec $XTERM -e $COMMAND
