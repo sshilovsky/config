@@ -3,11 +3,10 @@ source ~/.profile
 
 xrdb -override ~/.Xresources
 
-setxkbmap -layout us,ru -option -option caps:escape,grp:toggle &
+setxkbmap -layout us,ru -option -option caps:escape,grp:toggle,grp:alt_shift_toggle &
 
 xset dpms 0 0 0 &
 
 ~/.autorun &
-x-terminal-emulator &
 
 exec ~/bin/run-wm
