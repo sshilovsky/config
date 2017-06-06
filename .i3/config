@@ -133,3 +133,5 @@ bar {
         tray_output none
 }
 
+assign [class="^skypeforlinux$"] 8
+assign [class="^TelegramDesktop$"] 8
