@@ -131,25 +131,7 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
         font pango:DejaVu Sans Mono 16
-
-        tray_output primary
-        tray_output VGA-0
-        tray_output DVI-A-0
-        tray_output DVI-D-0
-        tray_output DVI-I-0
-        tray_output HDMI-0
-        tray_output VGA-1
-        tray_output DVI-A-1
-        tray_output DVI-D-1
-        tray_output DVI-I-1
-        tray_output HDMI-1
-        tray_output VGA-2
-        tray_output DVI-A-2
-        tray_output DVI-D-2
-        tray_output DVI-I-2
-        tray_output HDMI-2
 }
-# exec trayer
 
 assign [class="^skypeforlinux$"] 8
 assign [class="^TelegramDesktop$"] 8
