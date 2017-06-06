@@ -3,13 +3,12 @@
 xbindkeys &
 x-terminal-emulator &
 craftbar &
-sleep 5s
+sleep 2s
 
-ps -u$USER | egrep ' i3$' && trayer &
 (qbittorrent || ktorrent) &
 qmpdclient &
 goldendict &
 (apulse skype || skype || skypeforlinux) &
 Telegram &
-#if which psi-plus; then psi-plus; else psi; fi &
+#(psi-plus || psi) &
 #konversation &
