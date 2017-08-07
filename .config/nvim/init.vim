@@ -1,12 +1,30 @@
-colorscheme koehler
-highlight Folded guibg=darkblue guifg=white
-highlight MatchParen ctermbg=black
+call plug#begin('~/.local/share/nvim/plugged')
+" Don't forget to do :PlugInstall when adding plugins
+" See https://github.com/junegunn/vim-plug README for other commands
+
+"" Official Rust support: https://areweideyet.com/#vim
+Plug 'rust-lang/rust.vim'
+" Plug 'valloric/YouCompleteMe'
+" Plug 'racer-rust/vim-racer'
+" Plug 'scrooloose/syntastic' -- replaced with neomake
+" Plug 'honza/vim-snippets'
+" Plug 'sirver/UltiSnips'
+"" Custom Rust support:
+Plug 'neomake/neomake'
+
+call plug#end()
+
+colorscheme darkblue
+" colorscheme koelher
+" highlight Folded guibg=darkblue guifg=white
+" highlight MatchParen ctermbg=black
 
 augroup sshilovsky
 autocmd!
 
 " Autosource config on modifying (main file only so far)
 autocmd bufwritepost ~/.config/nvim/init.vim source ~/.config/nvim/init.vim
+autocmd bufwritepost * Neomake
 
 augroup END
 
