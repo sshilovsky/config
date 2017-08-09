@@ -5,7 +5,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 "" Official Rust support: https://areweideyet.com/#vim
 Plug 'rust-lang/rust.vim'
 " Plug 'valloric/YouCompleteMe'
-" Plug 'racer-rust/vim-racer'
+Plug 'racer-rust/vim-racer'
 " Plug 'scrooloose/syntastic' -- replaced with neomake
 " Plug 'honza/vim-snippets'
 " Plug 'sirver/UltiSnips'
@@ -27,6 +27,9 @@ autocmd bufwritepost ~/.config/nvim/init.vim source ~/.config/nvim/init.vim
 autocmd bufwritepost * Neomake
 
 augroup END
+
+autocmd FileType rust nmap gd <Plug>(rust-def)
+autocmd FileType rust nmap K <Plug>(rust-doc)
 
 set number
 set showcmd
