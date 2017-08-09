@@ -11,3 +11,4 @@ Plug 'racer-rust/vim-racer'
 "" Custom Rust support:
 Plug 'neomake/neomake'
 
+Plug 'ervandew/supertab'
