@@ -1,4 +1,3 @@
-
 colorscheme darkblue
 " colorscheme koelher
 " highlight Folded guibg=darkblue guifg=white
@@ -12,9 +11,6 @@ autocmd bufwritepost ~/.config/nvim/* source ~/.config/nvim/init.vim
 autocmd bufwritepost * Neomake
 
 augroup END
-
-autocmd FileType rust nmap gd <Plug>(rust-def)
-autocmd FileType rust nmap K <Plug>(rust-doc)
 
 set number
 set showcmd
