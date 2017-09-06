@@ -1,0 +1,10 @@
+[Unit]
+Description=Radio Paradise
+After=systemd-user-sessions.service network.target
+[Service]
+ExecStart=/usr/bin/mplayer http://stream-dc1.radioparadise.com/rp_96m.ogg
+WorkingDirectory=/home/sh
+Restart=always
+RestartSec=10
+[Install]
+WantedBy=default.target
