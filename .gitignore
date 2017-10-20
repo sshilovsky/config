@@ -2,3 +2,6 @@
 /FL
 /src
 /.ssh
+/.cache
+/.local/share
+/*.png
