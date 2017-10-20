@@ -2,13 +2,24 @@
 
 xbindkeys &
 x-terminal-emulator &
+x-www-browser &
 craftbar &
 sleep 2s
 
-(qbittorrent || ktorrent) &
+if which qbittorrent
+then
+	qbittorrent &
+else
+	ktorrent &
+fi
 qmpdclient &
 goldendict &
-(apulse skype || skype || skypeforlinux) &
+if which apulse
+then
+	apulse skypeforlinux &
+else
+	skypeforlinux &
+fi
 Telegram &
 #(psi-plus || psi) &
 #konversation &
