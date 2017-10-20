@@ -19,6 +19,7 @@ set ruler
 map <Space> <Leader>
 noremap <Leader>w :wall<CR>
 noremap <Leader>q :confirm q<CR>
+noremap q; q:
 
 imap <C-^> <Esc><C-^>
 

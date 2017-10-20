@@ -18,3 +18,5 @@ Plug 'racer-rust/vim-racer'
 "" General programming
 Plug 'neomake/neomake'
 Plug 'ervandew/supertab'
+
+Plug 'janko-m/vim-test'
