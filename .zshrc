@@ -25,6 +25,7 @@ alias ,q='exit'
 alias :quit='exit'
 alias /quit='exit'
 alias sl='sl -e'
+alias systemctl='systemctl --user'
 
 function the_function()
 {
@@ -96,9 +97,3 @@ alias dquilt="quilt --quiltrc=${HOME}/.quiltrc-dpkg"
 # RPS1="(%*) %(?.:).:()"
 # PS1="[$(print '%{\e[1;32m%}%n%{\e[0m%}@%{\e[1;36m%}%M%{\e[0m%}') %~]$ "
 # /0
-
-if [ "$TTY"=/dev/tty7 -a -z "$DISPLAY" ]
-then
-    loginctl activate "$XDG_SESSION_ID"
-    exec startx
-fi
