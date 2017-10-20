@@ -1,6 +1,6 @@
 [Unit]
 Description=Radio Paradise
-After=systemd-user-sessions.service network.target
+After=systemd-user-sessions.service network.target pulseaudio.service
 [Service]
 ExecStart=/usr/bin/mplayer http://stream-dc1.radioparadise.com/rp_96m.ogg
 WorkingDirectory=/home/sh

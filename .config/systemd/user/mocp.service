@@ -1,0 +1,17 @@
+[Unit]
+Description=Music on console Player
+After=systemd-user-sessions.service pulseaudio.service
+[Service]
+ExecStart=/usr/bin/mocp --server
+ExecStartPost=/usr/bin/mocp --on=shuffle
+ExecStartPost=/usr/bin/mocp --on=repeat
+ExecStartPost=/usr/bin/mocp --play
+ExecStartPost=/usr/bin/mocp --next
+ExecStartPost=/usr/bin/mocp --previous
+ExecStop=/usr/bin/mocp --stop
+Type=forking
+WorkingDirectory=/home/sh
+Restart=always
+RestartSec=10
+[Install]
+WantedBy=default.target
