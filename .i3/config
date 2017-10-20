@@ -135,5 +135,10 @@ bar {
 
 assign [class="^skypeforlinux$"] 8
 assign [class="^TelegramDesktop$"] 8
+assign [class="^Mumble$"] 8
+assign [class="^Upwork$"] 8
+
+for_window [class="^battle.net.exe$"] floating enable
+for_window [class="^Tk$"] floating enable
 
 hide_edge_borders vertical
