@@ -1,0 +1,11 @@
+#!/bin/bash
+
+TRICKLE="$(which trickle)"
+if test -x "$TRICKLE"
+then
+	TRICKLE="${TRICKLE} -d 50"
+fi
+
+$TRICKLE aptitude update --assume-yes &&
+	$TRICKLE aptitude upgrade --assume-yes --download-only &&
+	$TRICKLE aptitude dist-upgrade --assume-yes --download-only
