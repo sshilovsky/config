@@ -1,5 +1,5 @@
 #!/bin/bash
 
-which chromium && exec chromium "$@"
-which iceweasel && exec iceweasel "$@"
 which firefox && exec firefox "$@"
+which iceweasel && exec iceweasel "$@"
+which chromium && exec chromium "$@"
