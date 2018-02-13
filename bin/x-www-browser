@@ -3,3 +3,4 @@
 which firefox && exec firefox "$@"
 which iceweasel && exec iceweasel "$@"
 which chromium && exec chromium "$@"
+exit 1
