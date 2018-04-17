@@ -50,5 +50,5 @@
 "x-file-manager"
     Mod4 + Shift + F5
 
-"killall -SIGUSR1 switch-mode.sh"
+"killall -SIGUSR1 two-head.sh"
     Mod4 + F12

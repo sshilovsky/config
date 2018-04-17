@@ -6,11 +6,6 @@ then
     exec i3
 fi
 
-if [ "$HOST" = "ss-terra-stretch" -o "$HOST" = "ss-terra-jessie" -o "$HOST" = "ss-terra-gentoo" ]
-then
-    ~/bin/switch-mode.sh &
-fi
-
 caja --no-default-window &
 
 exec i3
