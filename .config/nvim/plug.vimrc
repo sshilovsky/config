@@ -20,3 +20,5 @@ Plug 'neomake/neomake'
 Plug 'ervandew/supertab'
 
 Plug 'janko-m/vim-test'
+
+Plug 'tpope/vim-fugitive'
