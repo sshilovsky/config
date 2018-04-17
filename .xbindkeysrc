@@ -3,6 +3,8 @@
 "mpc toggle; mocp --toggle-pause"
     XF86AudioPlay
 "mpc toggle; mocp --toggle-pause"
+    XF86AudioPause
+"mpc toggle; mocp --toggle-pause"
     Mod4 + Pause
 "mpc toggle; mocp --toggle-pause"
     Mod4 + F9
