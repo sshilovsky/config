@@ -1,20 +1,20 @@
-"mpc toggle"
+"mpc toggle; mocp --toggle-pause"
     XF86AudioMute
-"mpc toggle"
+"mpc toggle; mocp --toggle-pause"
     XF86AudioPlay
-"mpc toggle"
+"mpc toggle; mocp --toggle-pause"
     Mod4 + Pause
-"mpc toggle"
+"mpc toggle; mocp --toggle-pause"
     Mod4 + F9
 
-"mpc prev"
+"mpc prev; mocp --previous"
     XF86AudioPrev
-"mpc prev"
+"mpc prev; mocp --previous"
     Mod4 + Prior
 
-"mpc next"
+"mpc next; mocp --next"
     XF86AudioNext
-"mpc next"
+"mpc next; mocp --next"
     Mod4 + Next
 
 "amixer set Master 5%-"
