@@ -1,0 +1,3 @@
+Package: intel-microcode
+Pin: release a=stretch-backports
+Pin-Priority: 1001

@@ -1,0 +1,29 @@
+Package: *
+Pin: release a=stable
+Pin-Priority: 1000
+
+Package: *
+Pin: release a=unstable
+Pin-Priority: 2
+
+Package: firefox
+Pin: release a=unstable
+Pin-Priority: 1001
+
+Package: libfontconfig1
+Pin: release a=unstable
+Pin-Priority: 1001
+
+Package: fontconfig-config
+Pin: release a=unstable
+Pin-Priority: 1001
+
+Package: libnss3
+Pin: release a=unstable
+Pin-Priority: 1001
+
+# i386 compatibility
+
+Package: libfontconfig1:i386
+Pin: release a=unstable
+Pin-Priority: 1001
