@@ -134,6 +134,7 @@ bar {
 }
 
 assign [class="^skypeforlinux$"] 8
+assign [class="^Skype$"] 8
 assign [class="^TelegramDesktop$"] 8
 assign [class="^Mumble$"] 8
 assign [class="^Upwork$"] 8
