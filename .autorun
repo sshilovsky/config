@@ -3,6 +3,7 @@
 xbindkeys &
 x-terminal-emulator &
 x-www-browser &
+missing-parts &
 craftbar &
 sleep 2s
 
