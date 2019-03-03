@@ -1,2 +1,6 @@
-*customization: -color
-XTerm*faceName: Deja:size=9
+XTerm*.customization: -color
+XTerm*.faceName: Liberation
+XTerm*.faceSize: 11
+
+!Xmessage*.foreground: #8a8986
+!Xmessage*.background: #28211c
